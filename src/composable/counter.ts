@@ -14,10 +14,18 @@ export const coins = reactive([
 ])
 
 export const counter = () => {
+  const focusNext = (index: number) => {
+    const inputs = document.querySelectorAll<HTMLInputElement>('input[type="number"]')
+    if (inputs[index + 1]) {
+      inputs[index + 1].focus()
+    }
+  }
+
   const total = computed(() => coins.reduce((acc, m) => acc + m.valor * m.cantidad, 0))
 
   return {
     coins,
+    focusNext,
     total,
   }
 }
