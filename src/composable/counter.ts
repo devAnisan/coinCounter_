@@ -22,10 +22,22 @@ export const counter = () => {
   }
 
   const total = computed(() => coins.reduce((acc, m) => acc + m.valor * m.cantidad, 0))
+  const totalFormat = computed(() =>
+    new Intl.NumberFormat('es-CR', {
+      style: 'currency',
+      currency: 'CRC',
+      minimumFractionDigits: 2,
+    }).format(total.value),
+  )
 
+  const cleaner = () => {
+    coins.forEach((m) => (m.cantidad = 0))
+  }
   return {
     coins,
     focusNext,
+    totalFormat,
     total,
+    cleaner,
   }
 }
