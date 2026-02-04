@@ -13,7 +13,7 @@
       <table
         v-for="(coin, index) in coins"
         :key="coin.valor"
-        class="**:p-1 **:border"
+        class="**:p-1 *:border"
       >
       <tr class="odd:bg-gray-300 even:bg-gray-200">
         <td class="text-left p-1 w-16">{{ coin.valor }}</td>
