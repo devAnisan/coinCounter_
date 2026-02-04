@@ -13,7 +13,7 @@
       <table
         v-for="(coin, index) in coins"
         :key="coin.valor"
-        class="flex w-80 justify-between items-center py-0"
+        class="**:p-1"
       >
       <tr>
         <td class="text-left p-1 w-16">{{ coin.valor }}</td>
