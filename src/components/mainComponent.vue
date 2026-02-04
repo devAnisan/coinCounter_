@@ -13,10 +13,10 @@
       <table
         v-for="(coin, index) in coins"
         :key="coin.valor"
-        class="**:p-1 *:border"
+        class="**:p-1 odd:bg-gray-300 even:bg-gray-200"
       >
-      <tr class="odd:bg-gray-300 even:bg-gray-200">
-        <td class="text-left p-1 w-16">{{ coin.valor }}</td>
+      <tr class="">
+        <td class="text-left w-16">{{ coin.valor }}</td>
         <td >
           <input
             class="w-32"
@@ -29,8 +29,8 @@
         <td>
           =
         </td>
-        <td>
-          <h1>{{ coin.valor * coin.cantidad }}</h1>
+        <td >
+          <h1 class="w-32">{{ coin.valor * coin.cantidad }}</h1>
         </td>
       </tr>
     </table>
