@@ -13,12 +13,13 @@
       <table
         v-for="(coin, index) in coins"
         :key="coin.valor"
-        class="**:p-1"
+        class="**:p-1 **:border"
       >
       <tr class="odd:bg-gray-300 even:bg-gray-200">
         <td class="text-left p-1 w-16">{{ coin.valor }}</td>
-        <td class="w-32">
+        <td >
           <input
+            class="w-32"
             v-model="coin.cantidad"
             type="number"
             @keydown.enter.prevent="focusNext(index)"
