@@ -17,7 +17,7 @@
       >
       <tr class="odd:bg-gray-300 even:bg-gray-200">
         <td class="text-left p-1 w-16">{{ coin.valor }}</td>
-        <td>
+        <td class="w-32">
           <input
             v-model="coin.cantidad"
             type="number"
