@@ -15,12 +15,11 @@
         :key="coin.valor"
         class="**:p-1"
       >
-      <tr>
+      <tr class="odd:bg-gray-300 even:bg-gray-200">
         <td class="text-left p-1 w-16">{{ coin.valor }}</td>
         <td>
           <input
             v-model="coin.cantidad"
-            class="p-1 w-20"
             type="number"
             @keydown.enter.prevent="focusNext(index)"
           />
