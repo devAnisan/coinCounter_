@@ -10,21 +10,30 @@
       </button>
     </div>
     <div class="shadow-md p-8 m-4 rounded-md w-2xl flex flex-col justify-center items-center">
-      <div
+      <table
         v-for="(coin, index) in coins"
         :key="coin.valor"
         class="flex w-80 justify-between items-center py-0"
       >
-        <h3 class="text-left p-1 w-16">{{ coin.valor }}</h3>
-        <input
-          v-model="coin.cantidad"
-          class="p-1 w-20"
-          type="number"
-          @keydown.enter.prevent="focusNext(index)"
-        />
-        =
-        <h1>{{ coin.valor * coin.cantidad }}</h1>
-      </div>
+      <tr>
+        <td class="text-left p-1 w-16">{{ coin.valor }}</td>
+        <td>
+          <input
+            v-model="coin.cantidad"
+            class="p-1 w-20"
+            type="number"
+            @keydown.enter.prevent="focusNext(index)"
+          />
+
+        </td>
+        <td>
+          =
+        </td>
+        <td>
+          <h1>{{ coin.valor * coin.cantidad }}</h1>
+        </td>
+      </tr>
+    </table>
     </div>
     <div class="text-2xl font-bold">Total {{ totalFormat }}</div>
   </div>
